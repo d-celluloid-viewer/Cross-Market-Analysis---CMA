@@ -69,5 +69,3 @@ III. TECHNICAL REQUIREMENTS
 
     API Access: CoinGecko Public API
 
-IV. PROJECT TIMELINE AND SUBMISSION
-The implementation is designed for a 14-day development cycle, concluding with a live evaluation and a project demonstration.
