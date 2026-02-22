@@ -1,3 +1,5 @@
+pip install streamlit pymysql
+
 import streamlit as st
 
 st.title("Cross-Market Analysis: Crypto, Oil & Stocks with SQL")
