@@ -1,11 +1,9 @@
-!pip install streamlit pymysql
 
 import streamlit as st
-
-st.title("Cross-Market Analysis: Crypto, Oil & Stocks with SQL")
-
 import pandas as pd
 from sqlalchemy import create_engine
+
+st.title("Cross-Market Analysis: Crypto, Oil & Stocks with SQL")
 
 st.subheader("Cross-Market Analysis Dashboard")
 
@@ -214,7 +212,8 @@ elif page == "Query Analysis":
             sql = "select * from api_data order by last_updated desc limit 1"
 
         elif query_option == "Calculate the average daily price of Ethereum in the past 1 year.":
-            sql = """SELECT
+            sql = """
+                    SELECT
                     DATE(last_updated) AS price_date,
                     AVG(current_price) AS daily_avg_price
                     FROM api_data
@@ -222,7 +221,8 @@ elif page == "Query Analysis":
                     symblol = 'eth'
                     AND last_updated >= DATE_SUB(CURDATE(), INTERVAL 1 YEAR)
                     GROUP BY DATE(last_updated)
-                    ORDER BY price_date"""
+                    ORDER BY price_date
+                    """
             
         elif query_option == "Show the daily price trend of Bitcoin in Feb 2026.":
             sql = "select * from api_data where id = 'bitcoin' and year(last_updated) = 2026 and month(last_updated) = 2"    
@@ -335,4 +335,4 @@ elif page == "Insights":
 
             # --- Table ---
             st.subheader("Daily Price Table")
-            st.dataframe(df)    
+            st.dataframe(df)
