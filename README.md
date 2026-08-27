@@ -1,5 +1,7 @@
 # Cross-Market Analysis: Crypto, Oil & Stocks with SQL and Streamlit
 
+project deployment can be found [here](https://cross-market-analysis---cma-dcvhere.streamlit.app/)
+
 ## Project Overview
 *   **Domain:** Financial Analytics & Business Intelligence (BI)
 *   **Objective:** Compare cryptocurrency behavior against traditional assets (oil, stock indices) to evaluate if crypto acts as "digital gold" or an independent asset class.
